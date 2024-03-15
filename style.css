@@ -30,7 +30,7 @@ a:active {
 }
 
 /* Hero section */
-.hero-image {
+.hero-background {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
     url('Images/hero-image.jpg');
   height: 100%;
@@ -47,7 +47,7 @@ a:active {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgb(18, 18, 18, 0.9);
+  background-color: rgb(18, 18, 18, 0.7);
 }
 
 .navbar ul li {
@@ -61,7 +61,7 @@ a:active {
 }
 
 #nav-item-six:hover {
-  background: #ff7d7d;
+  background: #d357d9;
   transition: 0.5s;
   cursor: pointer;
 }
@@ -73,7 +73,7 @@ a:active {
 }
 
 .navbar ul li:hover {
-  background: purple;
+  background: #700a80;
   transition: 0.5s;
   cursor: pointer;
 }
@@ -107,10 +107,11 @@ a:active {
   color: aliceblue;
   text-decoration: none;
   margin-right: 15px;
+  border-radius: 5px;
 }
 
 .btn.one {
-  background-color: rgb(75, 34, 88);
+  background-color: #700a80;
 }
 
 .btn.two {
@@ -121,15 +122,15 @@ a:active {
 }
 
 .btn.one:hover {
-  background-color: rgb(79, 23, 79);
+  background-color: #600a6d;
 }
 
 .btn.two:hover {
-  background-color: rgb(79, 23, 79);
+  background-color: #700a80;
 }
 
 .btn.three:hover {
-  background-color: rgb(79, 23, 79);
+  background-color: #700a80;
 }
 
 /* Coming soon in theaters  */
@@ -578,6 +579,7 @@ iframe {
   cursor: pointer;
   font-weight: 700;
   transition: 0.4s;
+  border-radius: 5px;
 }
 .screenwriter button:hover {
   background-color: #700a80;
@@ -620,10 +622,15 @@ iframe {
   width: 80%;
   text-align: center;
 }
-.boxcontainer h1,
-p {
+.boxcontainer h1 {
   text-align: left;
-  margin-right: 30px;
+  margin-right: 40px;
+  display: grid;
+}
+
+.boxcontainer p {
+  text-align: left;
+  margin-right: 40px;
   display: grid;
 }
 
@@ -719,17 +726,18 @@ p {
   border: none;
   font-size: 1rem;
   transition: 0.4s;
+  border-radius: 5px;
 }
 .sound button:hover {
   background-color: #700a80;
+
   color: aliceblue;
 }
 
 /* Subscription */
 .subscribe {
-  height: 300px;
+  height: 250px;
   color: aliceblue;
-  background-image: linear-gradient(rgba(128, 0, 128, 0.447), rgb(12, 12, 12));
 }
 .subscribeContainer {
   padding-top: 70px;
@@ -741,7 +749,7 @@ p {
 }
 
 .subscribe button {
-  background-color: aliceblue;
+  background-color: #700a80;
   height: 50px;
   width: 170px;
   font-weight: 700;
@@ -749,15 +757,18 @@ p {
   border: none;
   font-size: 1rem;
   transition: 0.4s;
+  color: aliceblue;
+  border-radius: 5px;
 }
 
 .subscribe button:hover {
-  background-color: #700a80;
+  background-color: #600a6d;
   color: aliceblue;
 }
 
 /* Contact */
 .contact {
+  padding-top: 20px;
   color: aliceblue;
 }
 
@@ -828,4 +839,153 @@ p {
   font-size: 1.2rem;
   padding: 15px 10px 0;
   margin-top: auto;
+}
+
+/* Login */
+
+.login-background {
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper-login {
+  position: relative;
+  width: 400px;
+  height: 440px;
+  background-color: rgb(248, 250, 250);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0 30px 0;
+  overflow: hidden;
+  transition: height 0.2s ease;
+}
+
+.wrapper-login.active {
+  height: 520px;
+}
+.wrapper-login .form-box {
+  width: 80%;
+  padding: 40px;
+}
+
+.wrapper-login .form-box.login {
+  transition: transform 0.18s ease;
+  transform: translateX(0);
+}
+
+.wrapper-login.active .form-box.login {
+  transition: none;
+  transform: translateX(-400px);
+}
+
+.wrapper-login .form-box.register {
+  position: absolute;
+  transition: none;
+  transform: translateX(400px);
+}
+
+.wrapper-login.active .form-box.register {
+  transition: transform 0.18s ease;
+  transform: translateX(0);
+}
+
+.form-box h2 {
+  font-size: 2em;
+  font-weight: 800;
+  color: rgb(11, 11, 11);
+  text-align: center;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid black;
+  margin: 30px 0;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  font-weight: 500;
+  pointer-events: none;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.input-box .icon-login {
+  position: absolute;
+  right: 8px;
+  font-size: 1.2em;
+  line-height: 58px;
+}
+
+.remember-forgot {
+  font-size: 0.9em;
+  font-weight: 500;
+  margin: -15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.remember-forgot label input {
+  accent-color: #1f2845;
+  margin-right: 3px;
+}
+
+.remember-forgot a {
+  text-decoration: none;
+  color: #334171;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+.btnLog {
+  width: 100%;
+  height: 45px;
+  background: #700a80;
+  outline: none;
+  cursor: pointer;
+  font-size: 1em;
+  color: aliceblue;
+  font-weight: 700;
+  border: none;
+  border-radius: 2px;
+}
+.login-register {
+  font-size: 0.9em;
+  font-weight: 500;
+  margin: 25px 0 10px;
+}
+
+.login-register p {
+  display: inline;
+}
+.login-register p a {
+  text-decoration: none;
+  color: #1f2845;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.login-register p a:hover {
+  text-decoration: underline;
 }

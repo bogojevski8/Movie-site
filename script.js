@@ -65,3 +65,17 @@ fetch(
   .catch(err => {
     console.error(err);
   });
+
+// Login
+
+const wrapper = document.querySelector('.wrapper-login');
+const loginLink = document.querySelector('.login-link');
+const registerLink = document.querySelector('.register-link');
+
+registerLink.addEventListener('click', () => {
+  wrapper.classList.add('active');
+});
+
+loginLink.addEventListener('click', () => {
+  wrapper.classList.remove('active');
+});
